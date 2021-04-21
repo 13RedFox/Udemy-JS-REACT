@@ -241,3 +241,119 @@
 // * Нормальный формат
 
 // Object.setPrototypeOf(jonh, soldier);
+
+// ! Lessons 26 Динамическая типизация в JS
+
+// ? To String 
+
+// * 1. (Старый метод)
+
+// console.log(typeof (String(null)));
+
+// * 2. (Интерполяция)
+
+// console.log(typeof (5 + ''));
+
+// const num = 5;
+// console.log('https://vk.com/catalog/' + num);
+
+// const fontSize = 26 + 'px';
+
+// ? To Number 
+
+// * 1. (Старый метод)
+// console.log(typeof (Number('4')));
+
+// * 2.
+
+// console.log(typeof (+'4'));
+
+// * 3.
+
+// console.log(typeof (parseInt('4px', 10)));
+
+// let answer = +prompt('Hello','');
+
+// ? To boolean
+
+// * 1. false 
+
+// 0, '', null, undefined, NaN;
+
+// let switcher = null;
+
+// if (switcher) {
+//   console.log('Working...');
+// }
+
+// switcher = 1;
+
+// if (switcher) {
+//   console.log('Working...');
+// }
+
+// * 2.
+// console.log(typeof (Boolean('4')));
+
+// * 3.
+// console.log(typeof (!!'4'));
+
+// ! Lessons 27 Задачи с собеседований на понимание основ
+
+// * 1. ( x = 5)
+// let x = 5;
+// console.log(x++);
+
+// * 2 (NaN)
+// console.log([] + false - null + true);
+
+// * 3 (x = 2)
+// let y = 1;
+// let x = y = 2;
+// console.log(x);
+
+// * 4 ('12')
+// console.log([] + 1 + 2);
+
+// * 5 ('1)
+// console.log('1'[0]);
+
+// * 6 (null) && - запинается на лжи!
+// console.log(2 && 1 && null && 0 && undefined);
+
+// * 7 (false)
+// console.log(!!(1 && 2) === (1 && 2));
+
+// * 8 (3) || - запинается на правде!
+// console.log(null || 2 && 3 || 4);
+
+// * 9 (false)
+// const a = [1, 2, 3];
+// const b = [1, 2, 3];
+// console.log(a === b);
+
+// * 10 (Infinity)
+// console.log(+'Infinity');
+
+// * 11 (false)
+// console.log('Ежик' > 'яблоко');
+
+// * 12 (2)
+
+// console.log(0 || '' || 2 || undefined || true || false);
+
+// ! Lessons 28 Получение элементов со страницы
+
+const box = document.querySelector('.box');
+const btns = document.querySelectorAll('button');
+
+console.log(box);
+console.log(btns);
+
+btns.forEach((item) => {
+  item.style.color = 'white';
+  item.style.backgroundColor = 'crimson';
+  item.style.border = 'none';
+});
+
+// ! Lessons 29 Действия с элементами на странице
