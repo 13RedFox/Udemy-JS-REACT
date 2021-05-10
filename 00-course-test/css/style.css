@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.btn {
+  background-color: darkcyan;
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  padding: 0 10px;
+}
+.wrapper {
+  width: 400px;
+  height: 400px;
+  border: 2px solid crimson;
+  margin: 0 auto;
+  position: relative;
+}
+.box {
+  width: 75px;
+  height: 75px;
+  background-color: yellowgreen;
+  position: absolute;
+}

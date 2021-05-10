@@ -344,16 +344,171 @@
 
 // ! Lessons 28 Получение элементов со страницы
 
-const box = document.querySelector('.box');
-const btns = document.querySelectorAll('button');
+// const box = document.querySelector('.box');
+// const btns = document.querySelectorAll('button');
 
-console.log(box);
-console.log(btns);
+// console.log(box);
+// console.log(btns);
 
-btns.forEach((item) => {
-  item.style.color = 'white';
-  item.style.backgroundColor = 'crimson';
-  item.style.border = 'none';
-});
+// btns.forEach((item) => {
+//   item.style.color = 'white';
+//   item.style.backgroundColor = 'crimson';
+//   item.style.border = 'none';
+// });
 
-// ! Lessons 29 Действия с элементами на странице
+// ! Lessons 31 События и их обработчики
+
+// const btn = document.querySelector('.btn');
+
+// btn.addEventListener('click', () => {
+//   console.log('Click');
+// });
+
+// btn.addEventListener('mouseenter', (e) => {
+//   console.log(e.target);
+//   console.log('Hover');
+// });
+
+// btn.addEventListener('click', (e) => {
+//   e.target.removeEventListener()
+//   console.log('Click');
+// });
+
+// let i = 0;
+// const deleteElement = (e) => {
+//   console.log(e.target);
+//   i++;
+//   if (i === 1) {
+//     btn.removeEventListener('click', deleteElement);
+//   }
+// };
+
+// btn.addEventListener('click', deleteElement);
+
+// ! Lessons 32 Навигация по DOM - элементам,data-атрибуты, преимущество for/of
+
+// console.log(document.body);
+// console.log(document.body.childNodes);
+// console.log(document.body.firstChild);
+// console.log(document.body.lastChild);
+
+// console.log(document.querySelector('.heart').parentNode);
+// console.log(document.querySelector('[data-current="3"').previousElementSibling);
+
+// for (let node of document.body.childNodes) {
+//   if (node.nodeName === '#text') {
+//     continue;
+//   }
+//   console.log(node);
+// }
+
+// ! Lessons 37 ClassList, дилегирование событий
+
+// const btns = document.querySelectorAll('button');
+// const wrapper = document.querySelector('.btn-block');
+
+// console.log(btns[0].classList.length);
+// console.log(btns[0].classList.item(1));
+// console.log(btns[1].classList.add('red', 'pink'));
+// console.log(btns[0].classList.remove('blue'));
+// console.log(btns[0].classList.toggle('orange'));
+
+// if (btns[1].classList.contains('red')) {
+//   console.log('red');
+// }
+
+// btns[0].addEventListener('click', () => {
+
+// if (!btns[1].classList.contains('red')) {
+//   btns[1].classList.add('red');
+// } else {
+//   btns[1].classList.remove('red');
+// }
+
+//   btns[1].classList.toggle('red');
+
+// });
+
+// wrapper.addEventListener('click', (event) => {
+//   if (event.target && event.target.tagName === 'BUTTON') {
+//     console.log('Hello');
+//   }
+// });
+
+// btns.forEach(btn => {
+//   btn.addEventListener('click', () => {
+//     console.log('Hello');
+//   });
+// });
+
+// const btn = document.createElement('button');
+// btn.classList.add('red');
+// wrapper.append(btn);
+
+// ! Lessons 39 setTimeout и setInterval Скрипты и время их выполнения.
+
+// const btn = document.querySelector('.btn');
+// let timerId,
+//   i = 0;
+
+// function myAnimation() {
+//   const elem = document.querySelector('.box');
+//   let pos = 0;
+
+//   const id = setInterval(frame, 10);
+
+//   function frame() {
+//     if (pos === 321) {
+//       clearInterval(id);
+//     } else {
+//       pos++;
+//       elem.style.top = pos + 'px';
+//       elem.style.left = pos + 'px';
+//     }
+//   }
+// }
+
+// btn.addEventListener('click', myAnimation);
+
+// function loger() {
+//   if (i === 3) {
+//     clearInterval(timerId);
+//   }
+//   console.log('text');
+//   i++;
+// }
+
+// let id = setTimeout(function log() {
+//   console.log('Hello');
+//   id = setTimeout(log, 1000);
+// }, 1000);
+
+// ! Lessons 39 Работа с датами
+
+// const now = new Date('2020-05-01');
+// new Date.parse('2020-05-01');
+
+// console.log(now.setHours(18));
+
+// console.log(now);
+
+// console.log(now.getFullYear());
+// console.log(now.getMonth());
+// console.log(now.getDate());
+// console.log(now.getDay());
+// console.log(now.getUTCHours());
+
+// console.log(now.getTimezoneOffset());
+// console.log(now.getTime());
+
+// let start = new Date();
+
+// for (let i = 0; i < 100000; i++) {
+//   let some = i ** 3;
+// }
+
+// let end = new Date();
+
+// console.log(`Циклы отработал за ${end - start} миллисекунд`);
+
+// ! Lessons 39 Работа с датами
